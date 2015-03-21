@@ -95,21 +95,67 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+* {
+    font-weight: 400;
+}
 
+body {
+    width: 1024px;
+    margin: 0 auto;
+}
 
+h1 {
+    font-size: 8.5em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+    font-weight: 800;
+}
 
+h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1em;
+    border-bottom: 1px solid #4497CA;
+}
 
+h3 {
+    color: #000;
+}
 
+h4 {
+    font-weight: 400;
+    font-size: 1em;
+}
 
+ul {
+    padding: 0;
+}
 
+ul li {
+    list-style: none;
+}
 
+h4, p, li {
+    color: #585B5C;
+}
 
+p, li {
+    font-size: 0.85em;
+}
 
+#personal_details .pure-u-3-4 {
+  color: #000;
+}
 
+.pure-u-1-2 {
+    padding-right: 2em;
+}
 
-
-
-
+.pure-g [class *="pure-u"] {
+    box-sizing: border-box;
+}
 
 /* ==========================================================================
    Helper classes
