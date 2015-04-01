@@ -1,13 +1,5 @@
-/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
 /* ==========================================================================
-   Base styles: opinionated defaults
+   Base styles
    ========================================================================== */
 
 html {
@@ -15,28 +7,6 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
 
 hr {
     display: block;
@@ -47,67 +17,66 @@ hr {
     padding: 0;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
+* {
+    box-sizing: border-box;
 }
 
-/*
- * Remove default fieldset styles.
- */
+body {
+    overflow-x: hidden;
+}
 
-fieldset {
-    border: 0;
-    margin: 0;
+ul {
     padding: 0;
+    margin: 0;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
+ul li {
+    list-style: none;
+}
 
-textarea {
-    resize: vertical;
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+ul.list-inline li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+nav.menu {
+    background: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+nav.menu ul li {
+    display: inline-block;
+    border: 2px solid #fff;
+    float: left;
+}
+
+nav.menu ul li a {
+    color: #fff !important;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    padding: 0.5em 1em;
 }
 
 
-/* *********************************************************************************************************************
-    One% CSS Grid - 12 Columns Fluid CSS Grid System
-
-    Why One% ? Let’s count ...
-        we have 12 columns (magic number divided by 2, 3, 4, 6)
-
-        for 12 columns we need 11 margins
-
-        so if we count margin 3%, then 3% * 11 margins = 33%
-
-        and if we count width of 1 column 5.5%, than 5.5% * 12 columns = 66%
-
-        in the end we have 33% + 66% = 99% aaand ???
-
-        1% is still here so that's the name - One%
-
-    2 starting options ? Let’s count a bit more ...
-        1200px - perfectly fits 1280 screens
-            12 columns
-            margin 3% / 36px (full-width)
-            col1 5.5% / 66px (full-width)
-
-        1000px - perfectly fits 1024 screens
-            12 columns
-            margin 3% / 30px (full-width)
-            col1 5.5% / 55px (full-width)
-*/
+/* ==========================================================================
+   12-column fluid grid system
+   ========================================================================== */
 
 /* *********************************************************************************************************************
  * Main container for all
@@ -198,64 +167,8 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Resume-specific styles
    ========================================================================== */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-}
-
-ul li {
-    list-style: none;
-}
-
-h1, h2, h3, h4, h5 {
-    margin: 0;
-}
-
-h1, h2 {
-    text-transform: uppercase;
-}
-
-.text-center {
-    text-align: center;
-}
-
-ul.list-inline li {
-    display: inline-block;
-    padding: 0 5px;
-}
-
-nav.menu {
-    background: #000;
-    position: fixed;
-    top: 0;
-    right: 0;
-}
-
-nav.menu ul li {
-    display: inline-block;
-    border: 2px solid #fff;
-    float: left;
-}
-
-nav.menu ul li a {
-    color: #fff !important;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 700;
-    display: block;
-    padding: 0.5em 1em;
-}
 
 #resume h1, #resume h3 {
     color: #231f20;
@@ -316,6 +229,11 @@ nav.menu ul li a {
     font-size: 1em;
 }
 
+#resume #personal_details .col9 {
+    position: relative;
+    padding-left: 1.75em;
+}
+
 #resume #personal_details h2 {
     margin-bottom: 0.3em;
 }
@@ -360,16 +278,13 @@ nav.menu ul li a {
     margin-top: 2em;
 }
 
+/* Icon-related styles */
+
 #resume h2:before, #resume #personal_details .col9:before, #resume #skills h3:before {
     content: ' ';
     position: absolute;
     left: 0;
     background-repeat: no-repeat;
-}
-
-#resume #personal_details .col9 {
-    position: relative;
-    padding-left: 1.75em;
 }
 
 #resume #profile h2:before {
@@ -482,14 +397,12 @@ nav.menu ul li a {
     margin-top: 5px;
 }
 
-
+/* ==========================================================================
+   About page styles
+   ========================================================================== */
 
 #about p {
     font-size: 1.25em;
-}
-
-#about p.small {
-    font-size: 1em;
 }
 
 #about a,
@@ -510,10 +423,6 @@ nav.menu ul li a {
     text-transform: uppercase;
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
-}
-
-#about .img-centered {
-    margin: 0 auto;
 }
 
 #about header {
@@ -543,43 +452,6 @@ nav.menu ul li a {
     margin-top: 1em;
 }
 
-#about .btn {
-    padding: 18px 27px;
-    font-size: 19px;
-    line-height: 1.33;
-    border-radius: 6px;
-    display: inline-block;
-    margin-bottom: 0;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-#about .navbar {
-    text-transform: uppercase;
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-}
-
-#about .navbar a:focus {
-    outline: 0;
-}
-
-#about .navbar .navbar-nav {
-    letter-spacing: 1px;
-}
-
-#about .navbar .navbar-nav li a:focus {
-    outline: 0;
-}
-
-#about .navbar-default,
-#about .navbar-inverse {
-    border: 0;
-}
-
 #about section#portfolio h3 {
     margin-bottom: 0;
     margin-top: 2em;
@@ -588,6 +460,10 @@ nav.menu ul li a {
 
 #about section#portfolio h4 {
     margin: 0.75em 0 0.5em;
+}
+
+#about #portfolio .portfolio-item img {
+    border: 1px solid gray;
 }
 
 #about section {
@@ -610,28 +486,6 @@ nav.menu ul li a {
 }
 #about section.success p a:hover, #about section.success p a:focus {
     text-decoration: none;
-}
-
-#about #portfolio .portfolio-item img {
-    border: 1px solid gray;
-}
-
-#about .btn-outline {
-    margin-top: 15px;
-    border: solid 2px #fff;
-    font-size: 20px;
-    color: #fff;
-    background: 0 0;
-    transition: all .3s ease-in-out;
-}
-
-#about .btn-outline:hover,
-#about .btn-outline:focus,
-#about .btn-outline:active,
-#about .btn-outline.active {
-    border: solid 2px #fff;
-    color: #2C3E50;
-    background: #fff;
 }
 
 #about footer {
@@ -657,6 +511,40 @@ nav.menu ul li a {
     background-color: #2980B9;
 }
 
+/* Buttons */
+
+#about .btn {
+    padding: 18px 27px;
+    font-size: 19px;
+    line-height: 1.33;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#about .btn-outline {
+    margin-top: 15px;
+    border: solid 2px #fff;
+    font-size: 20px;
+    color: #fff;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
+#about .btn-outline:hover,
+#about .btn-outline:focus,
+#about .btn-outline:active,
+#about .btn-outline.active {
+    border: solid 2px #fff;
+    color: #2C3E50;
+    background: #fff;
+}
+
 #about .btn-social {
     display: inline-block;
     width: 50px;
@@ -674,103 +562,8 @@ nav.menu ul li a {
     outline: 0;
 }
 
-/* end theme */
-
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers:
- * http://juicystudio.com/article/screen-readers-display-none.php
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
+   Print styles (from HTML5 Boilerplate)
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
