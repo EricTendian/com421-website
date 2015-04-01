@@ -158,7 +158,6 @@ textarea {
 
 .col1 img, .col2 img, .col3 img, .col4 img, .col5 img, .col6 img, .col7 img, .col8 img, .col9 img, .col10 img, .col11 img, .col12 img {
     display: block;
-    width: 100% \9;
     max-width: 100%;
     height: auto;
 }
