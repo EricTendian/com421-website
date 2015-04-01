@@ -245,6 +245,11 @@ nav.menu ul li a {
     border: none;
 }
 
+#resume #personal_details a {
+    color: inherit;
+    text-decoration: none;
+}
+
 #resume #education h2 {
     padding-left: 2.5em;
 }
